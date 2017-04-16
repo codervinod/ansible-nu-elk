@@ -42,13 +42,13 @@
 
 ## db-[99:101]-node.example.com
 [my-xi]
-10.4.82.77
+10.4.82.77 ansible_user=nutanix
 
 [my-pc1]
-10.4.82.174
+10.4.82.174 ansible_user=nutanix
 
 [my-pc2]
-10.4.82.175
+10.4.82.175 ansible_user=nutanix
 
 [my-null]
-10.4.31.232
+10.4.31.232 ansible_user=nutanix
