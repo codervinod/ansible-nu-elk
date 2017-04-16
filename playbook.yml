@@ -1,0 +1,4 @@
+- hosts: my-xi
+  become: yes
+  roles:
+    - geerlingguy.logstash
