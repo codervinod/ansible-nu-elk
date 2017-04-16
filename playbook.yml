@@ -1,4 +1,4 @@
 - hosts: my-xi
   become: yes
   roles:
-    - ansible-role-logstash
+    - { role: ansible-role-logstash, logstash_user: nutanix }
