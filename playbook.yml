@@ -1,4 +1,4 @@
 - hosts: my-xi
   become: yes
   roles:
-    - geerlingguy.logstash
+    - ansible-role-logstash
