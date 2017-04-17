@@ -17,3 +17,9 @@ logstash_install_plugins:
   - logstash-input-beats
 
 logstash_user: logstash
+
+logstash_elasticsearch_user: elastic
+
+logstash_elasticsearch_password: wont_tel_you
+
+logstash_group: root

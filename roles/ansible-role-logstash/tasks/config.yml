@@ -24,6 +24,7 @@
     - 12-apache.conf
     - 14-solr.conf
     - 15-drupal.conf
+    - 16-aplos.conf
   notify: restart logstash
 
 - name: Create Logstash configuration file for local syslog.
@@ -50,5 +51,15 @@
     owner: root
     group: root
     mode: 0644
+  notify: restart logstash
+  when: ansible_os_family == "RedHat"
+
+- name: Add logstash init script for logstash (Redhat)
+  template:
+    src: logstash-init.j2
+    dest: /etc/init.d/logstash
+    owner: root
+    group: root
+    mode: 0755
   notify: restart logstash
   when: ansible_os_family == "RedHat"
