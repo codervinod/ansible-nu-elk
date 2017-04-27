@@ -1,8 +1,8 @@
-- hosts: my-xi
+- hosts: nx-demo
   become: yes
   roles:
     - role: ansible-role-logstash
       logstash_user: nutanix
-      logstash_elasticsearch_hosts: https://4b4152b0f623e108c09001a7438dbb51.us-east-1.aws.found.io:9243
-      logstash_elasticsearch_user: elastic
-      logstash_elasticsearch_password: cJUEJk1JkFNOpbrze5mx3fp9
+      logstash_elasticsearch_hosts: "{{ lookup('env', 'ES_PATH') }}"
+      logstash_elasticsearch_user: "{{ lookup('env', 'ES_USER') }}"
+      logstash_elasticsearch_password: "{{ lookup('env', 'ES_PASSWD') }}"

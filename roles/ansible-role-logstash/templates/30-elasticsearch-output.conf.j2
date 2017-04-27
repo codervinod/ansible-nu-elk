@@ -1,9 +1,7 @@
 output {
   elasticsearch {
-    hosts => "https://4b4152b0f623e108c09001a7438dbb51.us-east-1.aws.found.io:9243"
+    hosts => "{{ logstash_elasticsearch_hosts }}"
     index => "logstash-%{+YYYY.MM.dd}"
     document_type => "%{[@metadata][type]}"
-    user => "elastic"
-    password => "cJUEJk1JkFNOpbrze5mx3fp9"
   }
 }

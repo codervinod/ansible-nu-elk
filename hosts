@@ -52,3 +52,6 @@
 
 [my-null]
 10.4.31.232 ansible_user=nutanix
+
+[nx-demo]
+nx-demo.com ansible_user=nutanix
